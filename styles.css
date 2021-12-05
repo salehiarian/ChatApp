@@ -1,0 +1,18 @@
+#messages {
+  border: 2px solid #c4c1c1;
+  padding: 40px 50px;
+  border-radius: 6px;
+}
+
+@media (min-width: 1100px) {
+  .container {
+    display: grid;
+    grid-template-columns: 45% 60%;
+    margin: auto;
+    margin-top: 70px;
+  }
+
+  .message_container {
+    position: fixed;
+  }
+}
