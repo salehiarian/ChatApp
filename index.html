@@ -20,37 +20,6 @@
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"
 ></script>
-<head>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<header>
-  <p>
-    <img
-      src="./logo.jpg"
-      alt="arian_logo"
-      style="max-width: 200px; position: fixed; top: 5px"
-    />
-  </p>
-</header>
-
-<div class="container">
-  <br />
-  <div class="jumbotron message_container">
-    <h1 class="display-4">Send Message</h1>
-    <br />
-    <input id="name" class="form-control" placeholder="Name" />
-    <br />
-    <textarea
-      id="message"
-      class="form-control"
-      placeholder="Message"
-    ></textarea>
-    <br />
-    <button id="send" class="btn btn-success">Send</button>
-  </div>
-
-  <div id="messages"></div>
-</div>
 
 <script>
   var socket = io();
@@ -81,3 +50,36 @@
     $.post("http://localhost:3000/messages", message);
   }
 </script>
+
+<head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+      <img
+        src="./logo.jpg"
+        alt="arian_logo"
+        style="max-width: 200px; position: fixed; top: 5px"
+      />
+    </header>
+  <div class="container">
+    <br />
+    <div class="jumbotron message_container">
+      <h1 class="display-4">Send Message</h1>
+      <br />
+      <input id="name" class="form-control" placeholder="Name" />
+      <br />
+      <textarea
+        id="message"
+        class="form-control"
+        placeholder="Message"
+      ></textarea>
+      <br />
+      <button id="send" class="btn btn-success">Send</button>
+    </div>
+
+    <div id="messages"></div>
+  </div>
+</body>
+
