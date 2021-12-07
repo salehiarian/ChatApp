@@ -70,12 +70,12 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/arians99/chat-app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/chat-app:latest
 
       - name: Run the image in a container
         uses: addnab/docker-run-action@v3
         with:
-          image: ${{ secrets.DOCKERHUB_USERNAME }}/arians99/chat-app:latest
+          image: ${{ secrets.DOCKERHUB_USERNAME }}/chat-app:latest
           run: |
             echo "runing the docker image"
             echo "Testing the nodejs  app endpoints"
